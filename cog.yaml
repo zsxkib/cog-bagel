@@ -9,6 +9,11 @@ build:
   system_packages:
     - "libgl1-mesa-glx"
     - "libglib2.0-0"
+    - "libgl1"
+    - "libxrender-dev"
+    - "ffmpeg"
+    - "libsm6" 
+    - "libxext6"
 
   # python version in the form '3.11' or '3.11.4'
   python_version: "3.11"
@@ -20,6 +25,7 @@ build:
   run:
   - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/latest/download/pget_$(uname -s)_$(uname -m)"
   - chmod +x /usr/local/bin/pget
+  - pip install flash-attn --no-build-isolation
 
 # predict.py defines how predictions are run on your model
 predict: "predict.py:Predictor"

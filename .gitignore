@@ -170,6 +170,17 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# ByteDance Bagel
+wandb
+__pycache__
+.vscode
+notebooks
+results
+*.ipynb_checkpoints
+eval_results
+tests
+.DS_Store
+
 # Replicate
 .cog
 /model_cache/*
